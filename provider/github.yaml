@@ -1,0 +1,49 @@
+credentials_for_provider:
+  access_tokens:
+    help:
+      en_US: Get your Access Tokens from Github Enterprise Deployment
+    label:
+      en_US: Access Tokens
+      pt_BR: Tokens de acesso
+      zh_Hans: Access Tokens
+    placeholder:
+      en_US: Please input your Github Access Tokens
+    required: true
+    type: secret-input
+    url: https://github.com/settings/tokens?type=beta
+  api_version:
+    default: "2022-11-28"
+    help:
+      en_US: Get your API Version from Github Enterprise Deployment
+    label:
+      en_US: API Version
+    placeholder:
+      en_US: Please input your Github API Version
+    required: false
+    type: text-input
+    url: https://docs.github.com/en/rest/about-the-rest-api/api-versions?apiVersion=2022-11-28
+  api_url:
+    help:
+      en_US: Github Enterprise API URL (default is https://api.github.com)
+    label:
+      en_US: Github Enterprise API URL
+    placeholder:
+      en_US: Please input your Github Enterprise API URL
+    required: false
+    type: text-input
+extra:
+  python:
+    source: provider/github.py
+identity:
+  author: Eugen Eisler
+  description:
+    en_US: GitHub Enterprise is an online software source code hosting service.
+  icon: icon.svg
+  label:
+    en_US: Github Enterprise
+  name: github
+  tags:
+    - utilities
+tools:
+  - tools/github_repositories.yaml
+  - tools/github_repository_readme.yaml

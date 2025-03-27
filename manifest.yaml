@@ -1,0 +1,32 @@
+author: eugeis
+created_at: "2025-03-227T08:03:44.658609186Z"
+description:
+  en_US: GitHub Enterprise is an online software source code hosting service.
+icon: icon.svg
+label:
+  en_US: Github Enterprise
+meta:
+  arch:
+    - amd64
+    - arm64
+  runner:
+    entrypoint: main
+    language: python
+    version: "3.12"
+  version: 0.0.1
+name: github-enterprise
+plugins:
+  tools:
+    - provider/github.yaml
+resource:
+  memory: 1048576
+  permission:
+    model:
+      enabled: true
+      llm: true
+    tool:
+      enabled: true
+tags:
+  - utilities
+type: plugin
+version: 0.0.4
